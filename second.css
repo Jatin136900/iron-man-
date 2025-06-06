@@ -1,0 +1,136 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Orbitron', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+  }
+
+  .hero {
+      background: radial-gradient(circle, #8f0000, #000);
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+  }
+
+  .hero img {
+      width: 300px;
+      animation: flyIn 3s ease-in-out forwards;
+  }
+
+  @keyframes flyIn {
+      0% {
+          transform: translateY(-200px) scale(0.5);
+          opacity: 0;
+      }
+
+      100% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+      }
+  }
+
+  .quote {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+      font-style: italic;
+  }
+
+  .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #111;
+      padding: 50px 20px;
+      border-top: 2px solid #900;
+      border-bottom: 2px solid #900;
+  }
+
+  .section img {
+      width: 300px;
+      margin: 10px;
+      filter: drop-shadow(0 0 10px red);
+  }
+
+  .info {
+      max-width: 500px;
+      margin: 10px;
+  }
+
+  .info h2 {
+      color: #ff0000;
+      margin-bottom: 10px;
+  }
+
+  .info p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+      color: #ddd;
+  }
+
+  .poster {
+      background: url('img/one.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      position: relative;
+  }
+
+  .poster::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+  }
+
+  .poster h1,
+  .poster h2,
+  .poster h3 {
+      z-index: 1;
+  }
+
+  .poster h1 {
+      font-size: 4rem;
+      color: #ff0000;
+  }
+
+  .poster h2 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+  }
+
+  .footer-icons {
+      z-index: 1;
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 20px;
+  }
+
+  .footer-icons span {
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 50%;
+      backdrop-filter: blur(4px);
+  }
+
+  @media (max-width: 768px) {
+      .hero img {
+          width: 200px;
+      }
+
+      .poster h1 {
+          font-size: 2.5rem;
+      }
+  }
